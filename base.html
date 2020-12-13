@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Tai Cai</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+
+    <!--==================================================-->
+    <!--   LOADING CDNS AND CSS                           -->
+    <!--==================================================-->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='{{url_for('static',filename='css/base.css')}}'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script type='text/x-mathjax-config'>
+        MathJax.Hub.Config({
+            'HTML-CSS': {
+                linebreaks: {automatic: true},
+                fonts: ['Neo-Euler'],
+                styles: {'.MathJax': {color: '#AED6F1'}},
+                scale: 90
+            }
+        });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <link rel='shortcut icon' href='{{url_for('static',filename='images/favicon.ico')}}'>
+
+    {% block header %} {% endblock %}
+</head>
+
+<body>
+    <!--==================================================-->
+    <!--   TAB ICON                                       -->
+    <!--==================================================-->
+    <link rel='icon' href='https://i.imgur.com/kLi232C.jpg'>
+    <link rel='apple-touch-icon' href='https://i.imgur.com/kLi232C.jpg'>
+
+    <!--==================================================-->
+    <!--   NAVBAR                                         -->
+    <!--==================================================-->
+    <nav class='navbar navbar-default navbar-fixed-top'>
+        <div class='container'>
+            <div class='navbar-header'>
+                <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <a class='navbar-brand' href='/'>HOME</a>
+            </div>
+            <div class='collapse navbar-collapse' id='myNavbar'>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li style='font-size:12px'><a href='blog'>BLOG</a></li>
+                    <li style='font-size:12px'><a href='misc'>MISC</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--==================================================-->
+    <!--   CHILDREN BLOCKS                                -->
+    <!--==================================================-->
+    {% block content %} {% endblock %}
+
+    <!--==================================================-->
+    <!--   FOOTER                                         -->
+    <!--==================================================-->
+    <div class='footer'>
+        <p><i class='fa fa-copyright'></i> 2020</p>
+    </div>
+</body>
+
+</html>
