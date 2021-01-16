@@ -1,57 +1,28 @@
-{% extends 'base.html' %}
+---
+layout: default
+title: Tai Cai | Home
+---
 
-{% block content %}
+
 <div class='container bg-main'>
-    <h3 class='margin'>Tai Cai</h3>
+    <h1>{{ page.title }}</h1>
     <hr>
-    <div class='row'>
-        <div class='col-sm-7'>
-            <p>
-                I am a data scientist on the Global Intelligence team at <a href='https://www.uber.com/us/en/careers/teams/data-science/' target='_blank'>Uber</a>. Prior to that, I was on the Data & Research team at <a href='https://www.bitsight.com/engineering-data-science-careers' target='_blank'>BitSight</a>, a cybersecurity ratings company based in Boston. I have a PhD in Biostatistics from <a href='https://gsas.harvard.edu/programs-of-study/all/biostatistics' target='_blank'>Harvard University</a>, and a Bachelor of Mathematics from the <a href='https://uwaterloo.ca/math' target='_blank'>University of Waterloo</a>.
-                <br><br>
-                This site contains various projects I enjoy working on during my spare time. Some of these are applied problems motivated by interesting data, while others are driven by curiosity about a particular concept.
-                <br><br>
-		My current areas of interest include: statistical properties of machine learning methods, computational biology, and causal inference.
-                <br><br>
-                Thanks for visiting! Send me an email if you would like to talk.
-                <br><br>
-            </p>
-        </div>    
-        <div class='col-sm-5 text-center'>
-            <img src='https://i.imgur.com/8FTiZUQ.jpg' class='img-responsive img-circle margin' style='display:inline; margin-top: 0; margin-bottom: 10px; width: 100%; height: auto; min-width: 200px; max-width: 325px'>
-            <p style='font-size: 12px'>cutting cake after my PhD defense</p>
-        </div>
-    </div>
-</div>
-<div class='container bg-main'>
-    <h3 class='margin'>Latests Posts</h3>
-    <hr>
-    <ul>
-        <li>
-            <a href='stephen-ai-smith' target='_blank'>Stephen A.I. Smith</a>
-            <br>
-            <p>
-                Language modeling using Stephen A. Smith's Twitter data.
-            </p>
-        </li>
-        <li>
-            <a href='stirlings-pogs' target='_blank'>Stirling's Pogs</a>
-            <br>
-            <p>
-                1990s Spawn pogs, the multinimial distribution, and Stirling numbers of the second kind.
-            </p>
-        </li>
-        <li>
-            <a href='basketball-reference-hall-of-fame-probabilities' target='blank'>Basketball-Reference Hall of Fame Probabilities</a>
-            <br>
-            <p>
-                A deep dive into how Basketball-Reference calculates its Hall of Fame probabilities.
-            </p>
-        </li>
-    </ul>
+    <p>
+        I am a Data Scientist on the Global Intelligence team at <a href='https://www.uber.com/us/en/careers/teams/data-science/' target='_blank'>Uber</a>, working on marketplace intelligence for Uber Eats. Prior to my current role, I worked on the Data and Research team at <a href='https://www.bitsight.com/engineering-data-science-careers' target='_blank'>BitSight</a>. I have a PhD in Biostatistics from <a href='https://gsas.harvard.edu/programs-of-study/all/biostatistics' target='_blank'>Harvard University</a>, and a Bachelor of Mathematics from the <a href='https://uwaterloo.ca/math' target='_blank'>University of Waterloo</a>.
+    </p>
+    <p>
+        This site contains various projects I enjoy working on during my spare time. Some of these are applied problems motivated by interesting data, while others are driven by curiosity about a particular concept.
+    </p>
+    <p>
+        Thanks for visiting! Send me an email if you would like to talk.
+    </p>
+    <br>
+    <img src='/assets/images/cake.jpeg' class='img-responsive img-circle margin' style='max-width: 350px'>
+    <p class='picture-caption'>cutting cake after my PhD defense</p>
 </div>
 <br>
-<br>
+
+
 <div class='container bg-main'>
     <hr>
     <div class='row text-center'>
@@ -66,9 +37,7 @@
                     </a>
                 </li>
             </ul>
-            <p>
-                Resume
-            </p>
+            <a href='https://github.com/caikitlearn/resume/blob/master/tc_resume.pdf' target='_blank'>Resume</a>
         </div>
         <div class='col-sm-3'>
             <ul class='list-inline text-center'>
@@ -82,7 +51,7 @@
                 </li>
             </ul>
             <p>
-                Email
+                <a href='mailto: &#116;&#99;&#97;&#105;&#64;&#109;&#97;&#105;&#108;&#46;&#104;&#97;&#114;&#118;&#97;&#114;&#100;&#46;&#101;&#100;&#117;'>Email</a>
             </p>
         </div>
         <div class='col-sm-3'>
@@ -97,7 +66,7 @@
                 </li>
             </ul>
             <p>
-                LinkedIn
+                <a href='https://www.linkedin.com/in/taicai/' target='_blank'>LinkedIn</a>
             </p>
         </div>
         <div class='col-sm-3'>
@@ -112,17 +81,9 @@
                 </li>
             </ul>
             <p>
-                GitHub
+                <a href='https://github.com/caikitlearn' target='_blank'>GitHub</a>
             </p>
         </div>
     </div>
 </div>
 <br>
-<div class='container bg-main text-center'>
-    <p style='font-size: 12px'>
-        <i>
-        The contents of this page are hosted on Amazon EC2 with Flask, nginx, and Gunicorn.
-        </i>
-    </p>
-</div>
-{% endblock %}
