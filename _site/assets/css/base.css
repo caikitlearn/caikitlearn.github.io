@@ -28,7 +28,7 @@ body {
 p {font-size: var(--text_size); color: var(--text_color);}
 
 ol {font-size: var(--text_size); list-style-type: decimal; color: var(--text_color);}
-ul {font-size: var(--text_size); color: var(--text_color);}
+ul {font-size: var(--text_size); color: var(--text_color); padding-left: 15px;}
 li {font-size: var(--text_size); color: var(--text_color);}
 
 h1 {font-size: 32px; font-weight: bold; color: var(--h1_color);}
