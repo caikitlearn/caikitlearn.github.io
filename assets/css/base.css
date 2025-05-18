@@ -1,234 +1,217 @@
-/*============================================================================*/
-/*  GLOBAL VARIABLES                                                                              */
-/*============================================================================*/
+/*----------------------------------------------------------------------------*/
+/*  GLOBAL VARIABLES                                                          */
+/*----------------------------------------------------------------------------*/
 :root {
-    --theme_color: #E67E22;
-    --text_color: #F5F5F5;
-    --h1_color: #AED6F1;
-    --h2_color: #F0B27A;
-    --background_color: #17202A;
-    --link_color: #5DADE2;
-    --hover_color: #AED6F1;
-    --text_size: 16px;
+  --theme_color: #e67e22; /* warm orange */
+  --text_color: #f5f5f5; /* off orange */
+  --h1_color: #abebc6; /* pale green */
+  --background_color: #17202a; /* dark blue */
+  --link_color: #85c1e9; /* medium blue */
+  --hover_color: #aed6f1; /* light blue */
+  --selection_color:   #21618c;
+  --text_size: 16px;
+  --h1_text_size: 32px;
+  --h2_text_size: 20px;
 }
 
 
-/*============================================================================*/
-/*  MAIN                                                                      */
-/*============================================================================*/
+/*----------------------------------------------------------------------------*/
+/*  BASE STYLES                                                               */
+/*----------------------------------------------------------------------------*/
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 
 body {
-    font: var(--text_size) 'Montserrat', sans-serif;
-    line-height: 1.5;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    background-color: var(--background_color);
-    color: var(--text_color);
-    font-size: var(--text_size);
+  font: var(--text_size) "Montserrat", sans-serif;
+  line-height: 1.5;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  background-color: var(--background_color);
+  color: var(--text_color);
+  font-size: var(--text_size);
 }
 
 ol {
-    list-style-type: decimal;
+  list-style-type: decimal;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 0px;
-    margin-left: 0px;
-    list-style-position: inside;
+  list-style-type: disc;
+  padding-left: 0px;
+  margin-left: 0px;
+  list-style-position: inside;
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: var(--h1_color);
+  font-size: var(--h1_text_size);
+  font-weight: bold;
+  color: var(--h1_color);
 }
 
 h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--h2_color);
+  font-size: var(--h2_text_size);
+  font-weight: bold;
+  color: var(--h2_color);
 }
 
 hr {
-    height: 0;
-    border-color: var(--text_color);
-    margin-top: 5px;
-}
-
-.img-responsive {
-    display: block;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-    min-width: 200px;
-}
-
-.date-right {
-    float: right;
-    padding-left: 100px;
-}
-
-.picture-caption {
-    font-size: 12px;
-    font-style: italic;
-    text-align: center;
-    margin-top: 10px;
+  height: 0;
+  border-color: var(--text_color);
+  margin-top: 5px;
 }
 
 ::selection {
-    background: var(--theme_color);
+  background: var(--selection_color);
 }
 
 ::-moz-selection {
-    background: var(--theme_color);
+  background: var(--selection_color);
 }
 
 
-/*============================================================================*/
-/*  NAVBAR                                                                    */
-/*============================================================================*/
+/*----------------------------------------------------------------------------*/
+/*  MODULES / COMPONENTS                                                      */
+/*----------------------------------------------------------------------------*/
+.img-responsive {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  min-width: 200px;
+}
+
+.date-right {
+  float: right;
+  padding-left: 100px;
+}
+
+.picture-caption {
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: var(--link_color);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link_color);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover_color);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: var(--theme_color);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.fa-circle {
+  color: var(--text_color);
+}
+
+.fa-envelope,
+.fa-linkedin,
+.fa-github,
+.fa-list-alt {
+  color: var(--link_color);
+}
+
+.fa-envelope:hover,
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-list-alt:hover {
+  color: var(--hover_color);
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*  MODULES / COMPONENTS                                                      */
+/*----------------------------------------------------------------------------*/
 .navbar {
-    padding-top: 0;
-    padding-bottom: 0;
-    border: 0;
-    border-radius: 0;
-    letter-spacing: 5px;
-    position: fixed;
-    width: 100%;
-    background-color: var(--theme_color);
-    z-index: 1;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  letter-spacing: 5px;
+  position: fixed;
+  width: 100%;
+  background-color: var(--theme_color);
+  z-index: 1;
 }
 
 .navbar-default {
-    border: var(--background_color);
+  border: var(--background_color);
 }
 
 .navbar-default .navbar-brand {
-    color: var(--background_color);
-    font-weight: bold;
+  color: var(--background_color);
+  font-weight: bold;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-    color: var(--text_color);
+  color: var(--text_color);
 }
 
-.navbar-default .navbar-nav>li>a {
-    color: var(--background_color);
-    font-weight: bold;
+.navbar-default .navbar-nav > li > a {
+  color: var(--background_color);
+  font-weight: bold;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
-    color: var(--text_color);
+.navbar-default .navbar-nav > li > a:hover {
+  color: var(--text_color);
 }
 
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color: transparent;
-    box-shadow: none;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: transparent;
-    background-color: var(--theme_color);
+  border-color: transparent;
+  background-color: var(--theme_color);
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:active {
-    background-color: var(--theme_color);
+  background-color: var(--theme_color);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: var(--background_color);
+  background-color: var(--background_color);
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar {
-    background-color: var(--text_color);
+  background-color: var(--text_color);
 }
 
-
-/*============================================================================*/
-/*  HYPERLINK COLORS                                                          */
-/*============================================================================*/
-a {
-    color: var(--link_color);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--link_color);
-    background-color: transparent;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--hover_color);
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-
-/*============================================================================*/
-/*  FONT AWESOME ICONS                                                        */
-/*============================================================================*/
-.fa-circle {
-    color: var(--text_color);
-}
-
-.fa-envelope {
-    color: var(--link_color);
-}
-
-.fa-envelope:hover {
-    color: var(--hover_color);
-}
-
-.fa-linkedin {
-    color: var(--link_color);
-}
-
-.fa-linkedin:hover {
-    color: var(--hover_color);
-}
-
-.fa-github {
-    color: var(--link_color);
-}
-
-.fa-github:hover {
-    color: var(--hover_color);
-}
-
-.fa-list-alt {
-    color: var(--link_color);
-}
-
-.fa-list-alt:hover {
-    color: var(--hover_color);
-}
-
-
-/*============================================================================*/
-/*  FOOTER                                                                    */
-/*============================================================================*/
 .footer {
-    vertical-align: middle;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--theme_color);
-    text-align: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--theme_color);
+  text-align: center;
+  vertical-align: middle;
 }
 
 .footer p {
-    margin: 0 0;
-    color: var(--background_color);
+  margin: 0px 0px;
+  color: var(--background_color);
 }
