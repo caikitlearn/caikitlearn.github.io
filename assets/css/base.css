@@ -4,7 +4,7 @@
 :root {
   --theme_color: #e67e22; /* warm orange */
   --text_color: #f5f5f5; /* off orange */
-  --h1_color: #abebc6; /* pale green */
+  --contrast_color: #abebc6; /* pale green */
   --background_color: #17202a; /* dark blue */
   --link_color: #85c1e9; /* medium blue */
   --hover_color: #aed6f1; /* light blue */
@@ -45,14 +45,13 @@ ul {
 
 h1 {
   font-size: var(--h1_text_size);
-  font-weight: bold;
-  color: var(--h1_color);
+  font-weight: 700;
+  color: var(--contrast_color);
 }
 
 h2 {
   font-size: var(--h2_text_size);
-  font-weight: bold;
-  color: var(--h2_color);
+  font-weight: 700;
 }
 
 hr {
@@ -113,7 +112,7 @@ a:hover {
 }
 
 a:focus {
-  color: var(--theme_color);
+  color: var(--contrast_color);
   background-color: transparent;
   text-decoration: underline;
 }
@@ -163,7 +162,7 @@ a:focus {
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: var(--text_color);
+  color: var(--hover_color);
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -172,7 +171,7 @@ a:focus {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: var(--text_color);
+  color: var(--hover_color);
 }
 
 .navbar-default .navbar-collapse,
@@ -197,7 +196,7 @@ a:focus {
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: var(--text_color);
+  background-color: var(--hover_color);
 }
 
 .footer {
