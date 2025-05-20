@@ -3,29 +3,85 @@
 /*----------------------------------------------------------------------------*/
 /* default fallback */
 :root {
-  --theme_color:       #e67e22; /* warm orange */
-  --text_color:        #f5f5f5; /* off-white */
-  --contrast_color:    #abebc6; /* pale green */
-  --background_color:  #17202a; /* dark blue */
-  --link_color:        #85c1e9; /* medium blue */
-  --hover_color:       #aed6f1; /* light blue */
-  --selection_color:   #21618c; /* sea blue */
-  --h1_text_size:      32px;
-  --h2_text_size:      20px;
-  --text_size:         16px;
+  --color-light:      #f5f5f5;            /* cloud white */
+  --color-dark:       #17202a;            /* ink black */
+  --color-hover:      #aed6f1;            /* sky blue */
+
+  /* default theme (dark) colors */
+  --border-color:     #e59866;            /* toffee orange */
+  --text-color:       var(--color-light); /* cloud white */
+  --background-color: var(--color-dark);  /* ink black */
+  --accent-color:     #85c1e9;            /* ocean spray */
+  --fa-circle-color:  #e59866;            /* toffee orange */
+
+  /* font sizes */
+  --h1_text_size:     32px;
+  --h2_text_size:     20px;
+  --text_size:        16px;
 }
 
-/*----------------------------------------------------------------------------*/
-/*  LIGHT THEME OVERRIDES                                                    */
-/*----------------------------------------------------------------------------*/
+html[data-theme='dark'] {
+  --border-color:     #e59866;            /* toffee orange */
+  --text-color:       var(--color-light); /* cloud white */
+  --background-color: var(--color-dark);  /* ink black */
+  --accent-color:     #85c1e9;            /* ocean spray */
+  --fa-circle-color:  #e59866;            /* toffee orange */
+}
+
 html[data-theme='light'] {
-  --theme_color:       #e67e22; /* warm orange - Stays the same for navbar background */
-  --text_color:        #212529; /* very dark grey/black (Main text color for light theme) */
-  --contrast_color:    #c0392b; /* strong reddish-orange (H1 text color for light theme) */
-  --background_color:  #f4f6f7; /* very light grey, almost white (Main background for light theme, Navbar text color) */
-  --link_color:        #2980b9; /* standard blue (Link color for light theme) */
-  --hover_color:       #3498db; /* lighter standard blue (Link hover color for light theme) */
-  --selection_color:   #f39c12; /* orange (Text selection background for light theme) */
+  --border-color:     #21618c;            /* denim blue */
+  --text-color:       var(--color-dark);  /* ink black */
+  --background-color: var(--color-light); /* cloud white */
+  --accent-color:     #0e6655;            /* cerulean wave */
+  --fa-circle-color:  var(--color-dark);  /* ink black */
+}
+
+html[data-theme='jazz'] {
+  --border-color:     #871ca1;            /* grape jelly */
+  --text-color:       #2c1679;            /* violet deep */
+  --background-color: #dcdcdc;            /* stone gray */
+  --accent-color:     #0ccddb;            /* teal pop */
+  --fa-circle-color:  #344982;            /* cadet blue */
+}
+
+html[data-theme='outrun'] {
+  --border-color:     #920075;            /* neon magenta */
+  --text-color:       var(--color-light); /* cloud white */
+  --background-color: #261447;            /* plum abyss */
+  --accent-color:     #2de2e6;            /* electric blue */
+  --fa-circle-color:  #f9c80e;            /* lemon zest */
+}
+
+html[data-theme='raptors'] {
+  --border-color:     #8e7cc3;            /* lavender haze */
+  --text-color:       var(--color-light); /* cloud white */
+  --background-color: #20124d;            /* grape noir */
+  --accent-color:     #922b21;            /* brick red */
+  --fa-circle-color:  #b4975a;            /* mustard seed*/
+}
+
+html[data-theme='severance'] {
+  --border-color:     #71b7d2;            /* sky mist */
+  --text-color:       #3b5c7d;            /* slate blue */
+  --background-color: var(--color-light); /* cloud white */
+  --accent-color:     #117a65;            /* emerald jewel */
+  --fa-circle-color:  #404040;            /* ash gray */
+}
+
+html[data-theme='snes'] {
+  --border-color:     #514689;            /* amethyst purple */
+  --text-color:       #211a21;            /* licorice black */
+  --background-color: #a7a4e0;            /* periwinkle dream */
+  --accent-color:     #54585a;            /* elephant gray */
+  --fa-circle-color:  var(--color-dark);  /* ink black */
+}
+
+html[data-theme='tyranitar'] {
+  --border-color:     #8daa7b;            /* TYRANITAR */
+  --text-color:       var(--color-light); /* TYRANITAR */
+  --accent-color:     #5b9cc8;            /* TYRANITAR */
+  --background-color: #121a21;            /* TYRANITAR */
+  --fa-circle-color:  #D9969D;            /* TYRANITAR */
 }
 
 
@@ -37,14 +93,14 @@ html {
 }
 
 body {
-  font: var(--text_size) "Montserrat", sans-serif;
+  font: var(--text_size) 'Montserrat', sans-serif;
   line-height: 1.5;
   padding-top: 150px;
   padding-bottom: 100px;
-  background-color: var(--background_color); /* Uses the current theme's background */
-  color: var(--text_color);                   /* Uses the current theme's text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-size: var(--text_size);
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ol {
@@ -54,35 +110,24 @@ ol {
 ul {
   list-style-type: disc;
   padding-left: 16px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 h1 {
   font-size: var(--h1_text_size);
   font-weight: 700;
-  color: var(--contrast_color); /* Uses the current theme's H1 color */
+  color: var(--accent-color);
 }
 
 h2 {
   font-size: var(--h2_text_size);
   font-weight: 700;
-  /* color: var(--text_color); /* Implicitly uses body text color, or define explicitly */
 }
 
 hr {
   height: 0;
-  border-color: var(--text_color); /* Uses the current theme's text color */
+  border-color: var(--text-color);
   margin-top: 5px;
-}
-
-::selection {
-  background: var(--selection_color); /* Uses the current theme's selection color */
-  color: var(--text_color); /* Optional: set text color for selection */
-}
-
-::-moz-selection {
-  background: var(--selection_color); /* Uses the current theme's selection color */
-  color: var(--text_color); /* Optional: set text color for selection */
 }
 
 
@@ -111,50 +156,50 @@ hr {
 }
 
 a {
-  color: var(--link_color); /* Uses the current theme's link color */
+  color: var(--accent-color);
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--link_color); /* Uses the current theme's link color */
+  color: var(--accent-color);
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--hover_color); /* Uses the current theme's hover color */
+  color: var(--color-hover);
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:focus {
-  color: var(--contrast_color); /* Uses the current theme's contrast color */
+  color: var(--color-hover);
   background-color: transparent;
   text-decoration: underline;
 }
 
 .fa-circle {
-  color: var(--text_color); /* Uses the current theme's text color */
+  color: var(--fa-circle-color);
 }
 
 .fa-envelope,
 .fa-linkedin,
 .fa-github,
 .fa-list-alt {
-  color: var(--link_color); /* Uses the current theme's link color */
+  color: var(--background-color);
 }
 
 .fa-envelope:hover,
 .fa-linkedin:hover,
 .fa-github:hover,
 .fa-list-alt:hover {
-  color: var(--hover_color); /* Uses the current theme's hover color */
+  color: var(--color-hover);
 }
 
 
 /*----------------------------------------------------------------------------*/
-/*  NAVBAR STYLES (Existing and New)                                         */
+/*  NAVBAR STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .navbar {
   padding-top: 0;
@@ -164,32 +209,32 @@ a:focus {
   letter-spacing: 5px;
   position: fixed;
   width: 100%;
-  background-color: var(--theme_color); /* Uses the current theme's theme_color (navbar background) */
+  background-color: var(--border-color);
   z-index: 1;
 }
 
 .navbar-default {
-  /* For dark theme, border is dark blue. For light theme, border is light grey. */
-  border-bottom: 1px solid var(--background_color); /* Subtle border using theme's background */
+  border-bottom: 1px solid var(--background-color);
 }
 
 .navbar-default .navbar-brand {
-  color: var(--background_color); /* Uses the current theme's background_color for text (dark blue on orange for dark, light grey on orange for light) */
+  color: var(--background-color);
   font-weight: bold;
+  padding-left: 0;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: var(--hover_color); /* Uses current theme's general hover color for navbar brand hover */
+  color: var(--color-hover);
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: var(--background_color); /* Uses the current theme's background_color for text */
+  color: var(--background-color);
   font-weight: bold;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: var(--hover_color); /* Uses current theme's general hover color for navbar links hover */
+  color: var(--color-hover);
 }
 
 .navbar-default .navbar-collapse,
@@ -200,104 +245,87 @@ a:focus {
 
 .navbar-default .navbar-toggle {
   border-color: transparent;
-  background-color: var(--theme_color); /* Uses current theme's navbar background */
+  background-color: var(--border-color);
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus,
 .navbar-default .navbar-toggle:active {
-  background-color: var(--theme_color); /* Uses current theme's navbar background */
+  background-color: var(--border-color);
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: var(--background_color); /* Uses current theme's background_color for icon bars (dark blue for dark, light grey for light) */
+  background-color: var(--background-color);
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: var(--hover_color); /* Uses current theme's general hover color */
+  background-color: var(--color-hover);
 }
 
-/* --- STYLES FOR NAVBAR BRAND WITH THEME TOGGLE (Copied from previous step) --- */
 .navbar-brand-with-toggle {
   display: flex;
   align-items: center;
-  float: left;
   height: 50px;
+  color: var(--background-color);
 }
 
 .navbar-brand-with-toggle .navbar-brand {
-  float: none !important;
   padding-top: 15px;
   padding-bottom: 15px;
   line-height: 20px;
   height: 50px;
   padding-left: 15px;
-  padding-right: 10px;
+  padding-right: 0;
   flex-shrink: 0;
   flex-grow: 0;
-}
-
-.theme-select {
-  padding: 6px 12px;
-  border-radius: 20px;
+  color: var(--background-color);
   font-size: 16px;
-  background: white;
-  border: 1px solid #ccc;
 }
 
 
-/*
-.navbar-brand-with-toggle .theme-switcher-nav {
-  display: flex;
-  align-items: center;
-}
-
-.theme-switcher-nav label {
-  margin-bottom: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 1.2em;
-}
-
-.theme-switcher-nav label .light-icon,
-.theme-switcher-nav label .dark-icon {
-  display: flex;
-  align-items: center;
-}
-
-.theme-switcher-nav input[type="checkbox"] {
-  display: none;
-}
-
-.theme-switcher-nav .dark-icon {
-  display: none;
-}
-.theme-switcher-nav .light-icon {
-  display: inline;
-}
-.theme-switcher-nav input[type="checkbox"]:checked ~ label .light-icon {
-  display: none;
-}
-.theme-switcher-nav input[type="checkbox"]:checked ~ label .dark-icon {
-  display: inline;
-}
-*/
 /*----------------------------------------------------------------------------*/
-/*  FOOTER STYLES                                                            */
+/*  FOOTER STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .footer {
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   width: 100%;
   z-index: 1;
-  background-color: var(--theme_color); /* Uses current theme's theme_color (navbar background) */
-  text-align: center;
-  vertical-align: middle;
+  background-color: var(--border-color);
+  padding: 5px 0;
 }
 
-.footer p {
-  margin: 0px 0px;
-  color: var(--background_color); /* Uses current theme's background_color for text */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  min-height: 20px;
+  position: relative;
+}
+
+.theme-select {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.theme-select select {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: var(--text_size);
+  color: var(--background-color);
+  background: var(--border-color);
+}
+
+.copyright-info {
+  text-align: center;
+  color: var(--background-color);
+  flex-shrink: 0;
 }
