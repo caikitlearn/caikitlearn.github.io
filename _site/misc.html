@@ -4,6 +4,14 @@
     <title>Tianyi Cai | Misc</title>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+      (function () {
+        const validThemes = ['light', 'dark', 'solarized'];
+        const storedTheme = localStorage.getItem('theme');
+        const theme = validThemes.includes(storedTheme) ? storedTheme : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
 
     <!------------------------------------------------------------------------->
     <!--  CSS                                                                -->
@@ -55,7 +63,8 @@
       document.getElementById('favicon').setAttribute('href', favicon_path);
     </script>
   </head>
-  <body> <nav class='navbar navbar-default navbar-fixed-top'>
+  <body data-theme='dark'>
+    <nav class='navbar navbar-default navbar-fixed-top'>
   <div class='container'>
     <div class='navbar-header'>
       <button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar'>
@@ -64,7 +73,14 @@
         <span class='icon-bar'></span>
         <span class='icon-bar'></span>
       </button>
-      <a class='navbar-brand' href='/'>HOME</a>
+      <div class="navbar-brand-with-toggle">
+        <a class='navbar-brand' href='/'>HOME</a>
+        <select id="theme-select" class="theme-select">
+          <option value="light">☀️ Light</option>
+          <option value="dark">🌙 Dark</option>
+          <option value="solarized">🌅 Solarized</option>
+        </select>
+      </div>
     </div>
     <div id='navbar' class='navbar-collapse collapse'>
       <ul class='nav navbar-nav navbar-right'>
@@ -77,37 +93,61 @@
       </ul>
     </div>
   </div>
-</nav> <div class='container bg-main'>
+</nav>
+    <div class='container bg-main'>
   <h1>Tianyi Cai | Misc</h1>
   <hr>
+  
+  <h2>
+    <a href='https://clonehero.net/' target='_blank'>
+      Clone Hero
+    </a>
+  </h2>
   <ul>
-    <h2>
-      <a href='https://clonehero.net/' target='_blank'>Clone Hero</a>
-    </h2>
     <li>
       <i>Clone of Guitar Hero / Rock Band for PC.</i>
     </li>
-    <h2>
-      <a href='https://play.pokemonshowdown.com/' target='_blank'>Pokémon Showdown</a>
-    </h2>
+  </ul>
+
+  <h2>
+    <a href='https://play.pokemonshowdown.com/' target='_blank'>
+      Pokémon Showdown
+    </a>
+  </h2>
+  <ul>
     <li>
       <i>Web-based Pokémon battle simulator.</i>
     </li>
-    <h2>
-      <a href='https://dash.harvard.edu/handle/1/39987982' target='_blank'>PhD Thesis</a>
-    </h2>
+  </ul>
+
+  <h2>
+    <a href='https://dash.harvard.edu/handle/1/39987982' target='_blank'>
+      PhD Thesis
+    </a>
+  </h2>
+  <ul>
     <li>
       <i>Statistical Methods for the Analysis of Observational Data with Multiple Correlated Outcomes.</i>
     </li>
-    <h2>
-      <a href='https://github.com/JSsixtyfour/smashremix/releases' target='_blank'>Smash Remix</a>
-    </h2>
+  </ul>
+  
+  <h2>
+    <a href='https://github.com/JSsixtyfour/smashremix/releases' target='_blank'>
+      Smash Remix
+    </a>
+  </h2>
+  <ul>
     <li>
       <i>A mod for Super Smash Bros. for the Nintendo 64.</i>
     </li>
-    <h2>
-      <a href='https://xgboosting.com/' target='_blank'>XGBoosting</a>
-    </h2>
+  </ul>
+  
+  <h2>
+    <a href='https://xgboosting.com/' target='_blank'>
+      XGBoosting
+    </a>
+  </h2>
+  <ul>
     <li>
       <i>Valuable resource for XGBoost.</i>
     </li>
@@ -117,13 +157,14 @@
     <!------------------------------------------------------------------------->
     <!--  FOOTER                                                             -->
     <!------------------------------------------------------------------------->
-    <div class='footer'>
+    <footer class='footer'>
       <p>
         <i class='fa fa-copyright'></i>
         <script>
           document.write(new Date().getFullYear());
         </script>
       </p>
-    </div>
+    </footer>
+    <script src='/assets/js/theme-switcher.js'></script>
   </body>
 </html>
