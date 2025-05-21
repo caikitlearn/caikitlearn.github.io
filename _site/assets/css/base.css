@@ -2,17 +2,16 @@
 /*  THEMES                                                                    */
 /*----------------------------------------------------------------------------*/
 /* default fallback */
+/* color comments were ~vibe coded~ */
 :root {
-  --color-light:      #f5f5f5;            /* cloud white */
-  --color-dark:       #17202a;            /* ink black */
-  --color-hover:      #aed6f1;            /* sky blue */
+  --color-hover:      #aed6f1;  /* sky breeze */
 
-  /* default theme (dark) colors */
-  --border-color:     #e59866;            /* toffee orange */
-  --text-color:       var(--color-light); /* cloud white */
-  --background-color: var(--color-dark);  /* ink black */
-  --accent-color:     #85c1e9;            /* ocean spray */
-  --fa-circle-color:  #e59866;            /* toffee orange */
+  /* dark theme */
+  --border-color:     #e59866;  /* pumpkin spice */
+  --text-color:       #f2eae3;  /* bone ivory */
+  --background-color: #17202a;  /* midnight ink */
+  --accent-color:     #85c1e9;  /* sapphire mist */
+  --fa-circle-color:  #e59866;  /* pumpkin spice */
 
   /* font sizes */
   --h1_text_size:     32px;
@@ -21,67 +20,67 @@
 }
 
 html[data-theme='dark'] {
-  --border-color:     #e59866;            /* toffee orange */
-  --text-color:       #f2eae3; /* cloud white */
-  --background-color: #17202a;  /* ink black */
-  --accent-color:     #85c1e9;            /* ocean spray */
-  --fa-circle-color:  #e59866;            /* toffee orange */
+  --border-color:     #e59866;  /* pumpkin spice */
+  --text-color:       #f2eae3;  /* bone ivory */
+  --background-color: #17202a;  /* midnight ink */
+  --accent-color:     #85c1e9;  /* sapphire mist */
+  --fa-circle-color:  #e59866;  /* pumpkin spice */
 }
 
 html[data-theme='light'] {
-  --border-color:     #6b8ca3;            /* denim blue */
-  --text-color:       #17202a;  /* ink black */
-  --background-color: #fdfcf9; /* cloud white */
-  --accent-color:     #3a5f9b;            /* cerulean wave */
-  --fa-circle-color:  #6b8ca3;            /* denim blue */
+  --border-color:     #6b8ca3;  /* ocean denim */
+  --text-color:       #17202a;  /* midnight ink */
+  --background-color: #fdfcf9;  /* vanilla bean */
+  --accent-color:     #3a5f9b;  /* river pebble */
+  --fa-circle-color:  #6b8ca3;  /* ocean denim */
 }
 
 html[data-theme='jazz'] {
-  --border-color:     #9c7aa6;            /* grape jelly */
-  --text-color:       #2c2c44;            /* violet deep */
-  --background-color: #e7e2ec;            /* stone gray */
-  --accent-color:     #418b8b;            /* teal pop */
-  --fa-circle-color:  #b9a1c5;            /* cadet blue */
+  --border-color:     #392682;  /* grape candy */
+  --text-color:       #2c2c44;  /* plum shadow */
+  --background-color: #e7e2ec;  /* lavender stone */
+  --accent-color:     #418b8b;  /* seafoam pop */
+  --fa-circle-color:  #9c7aa6;  /* dusty lavender */
 }
 
 html[data-theme='outrun'] {
-  --border-color:     #bb66aa;            /* neon magenta */
-  --text-color:       #fdf3fa; /* cloud white */
-  --background-color: #2b1d4c;            /* plum abyss */
-  --accent-color:     #6ee6e8;            /* electric blue */
-  --fa-circle-color:  #f5c06a;            /* lemon zest */
+  --border-color:     #bb66aa;  /* candy floss */
+  --text-color:       #fdf3fa;  /* sugar dust */
+  --background-color: #2b1d4c;  /* cosmic plum */
+  --accent-color:     #6ee6e8;  /* aqua glow */
+  --fa-circle-color:  #f5c06a;  /* mango peel */
 }
 
 html[data-theme='raptors'] {
-  --border-color:     #8b6cb8;            /* lavender haze */
-  --text-color:       #f5e9f0; /* cloud white */
-  --background-color: #281850;            /* grape noir */
-  --accent-color:     #993344;            /* brick red */
-  --fa-circle-color:  #d4bb6e;            /* mustard seed*/
+  --border-color:     #8b6cb8;  /* lilac haze */
+  --text-color:       #f5e9f0;  /* rose dust */
+  --background-color: #281850;  /* violet galaxy */
+  --accent-color:     #993344;  /* ruby brick */
+  --fa-circle-color:  #d4bb6e;  /* honey dijon */
 }
 
 html[data-theme='severance'] {
-  --border-color:     #92c9e0;            /* sky mist */
-  --text-color:       #3b5c7d;            /* slate blue */
-  --background-color: #eaf4f7; /* cloud white */
-  --accent-color:     #1a8f78;            /* emerald jewel */
-  --fa-circle-color:  #607080;            /* ash gray */
+  --border-color:     #607080;  /* toner gray */
+  --text-color:       #3b5c7d;  /* denim shadow */
+  --background-color: #eaf4f7;  /* cloud mist */
+  --accent-color:     #2874a6;  /* river stone */
+  --fa-circle-color:  #92c9e0;  /* arctic frost */
 }
 
 html[data-theme='snes'] {
-  --border-color:     #6b5c9e;            /* amethyst purple */
-  --text-color:       #1e1b1e;            /* licorice black */
-  --background-color: #bbb9e0;            /* periwinkle dream */
-  --accent-color:     #5a5e60;            /* elephant gray */
-  --fa-circle-color:  #383038;            /* ink black */
+  --border-color:     #6b5c9e;  /* amethyst purple */
+  --text-color:       #1e1b1e;  /* espresso bean */
+  --background-color: #bbb9e0;  /* periwinkle dream */
+  --accent-color:     #5a5e60;  /* asphalt gray */
+  --fa-circle-color:  #383038;  /* charcoal pit */
 }
 
 html[data-theme='tyranitar'] {
-  --border-color:     #8daa7b;            /* TYRANITAR */
-  --text-color:       #e6f1eb;            /* TYRANITAR */
-  --accent-color:     #3e6e90;            /* TYRANITAR */
-  --background-color: #121a21;            /* TYRANITAR */
-  --fa-circle-color:  #da818b;            /* TYRANITAR */
+  --border-color:     #8daa7b;  /* TYRANITAR */
+  --text-color:       #e6f1eb;  /* TYRANITAR */
+  --accent-color:     #3e6e90;  /* TYRANITAR */
+  --background-color: #121a21;  /* TYRANITAR */
+  --fa-circle-color:  #da818b;  /* TYRANITAR */
 }
 
 
