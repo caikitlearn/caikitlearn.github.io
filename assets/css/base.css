@@ -205,9 +205,9 @@ a:focus {
 /*  NAVBAR STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .navbar {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  letter-spacing: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  letter-spacing: 3px;
   position: fixed;
   width: 100%;
   background-color: var(--border-color);
@@ -261,8 +261,8 @@ a:focus {
 /*  FOOTER STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .footer {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   position: fixed;
   left: 0;
   bottom: 0;
