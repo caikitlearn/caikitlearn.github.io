@@ -147,6 +147,10 @@ hr {
   padding-left: 100px;
 }
 
+.icon-label {
+  margin-top: 10px
+}
+
 .picture-caption {
   font-size: 12px;
   font-style: italic;
@@ -178,21 +182,21 @@ a:focus {
   text-decoration: underline;
 }
 
-.fa-circle {
+.fas.fa-circle {
   color: var(--fa-circle-color);
 }
 
-.fa-envelope,
-.fa-linkedin,
-.fa-github,
-.fa-list-alt {
+.fas.fa-list-alt,
+.fas.fa-envelope,
+.fab.fa-linkedin-in,
+.fab.fa-github {
   color: var(--background-color);
 }
 
-.fa-envelope:hover,
-.fa-linkedin:hover,
-.fa-github:hover,
-.fa-list-alt:hover {
+.fas.fa-list-alt:hover,
+.fas.fa-envelope:hover,
+.fab.fa-linkedin-in:hover,
+.fab.fa-github:hover {
   color: var(--color-hover);
 }
 
@@ -201,84 +205,55 @@ a:focus {
 /*  NAVBAR STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .navbar {
-  padding-top: 0;
-  padding-bottom: 0;
-  border: 0;
-  border-radius: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   letter-spacing: 5px;
   position: fixed;
   width: 100%;
   background-color: var(--border-color);
   z-index: 1;
+  border: none;
+  border-radius: 0;
 }
 
-.navbar-default {
-  border-bottom: 1px solid var(--background-color);
-}
-
-.navbar-default .navbar-brand {
+.navbar a,
+.navbar .nav-link,
+.navbar .navbar-brand {
+  transition: none !important;
   color: var(--background-color);
-  font-weight: bold;
+  font-weight: 700;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover,
+.navbar .nav-link:focus,
+.navbar .navbar-brand:focus {
+  color: var(--color-hover);
+}
+
+.navbar-brand {
   padding-left: 0;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: var(--color-hover);
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: var(--background-color);
-  font-weight: bold;
-}
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: var(--color-hover);
-}
-
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-.navbar-default .navbar-toggle {
-  border-color: transparent;
-  background-color: var(--border-color);
-}
-
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:active {
-  background-color: var(--border-color);
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: var(--background-color);
-}
-
-.navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: var(--color-hover);
-}
-
-.navbar-brand-with-toggle {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  color: var(--background-color);
-}
-
-.navbar-brand-with-toggle .navbar-brand {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  line-height: 20px;
-  height: 50px;
-  padding-left: 15px;
-  padding-right: 0;
-  flex-shrink: 0;
-  flex-grow: 0;
-  color: var(--background-color);
   font-size: 16px;
+  font-weight: 700;
+}
+
+/* hamburger menu */
+.navbar-toggler {
+  background-color: var(--border-color);
+  border: none;
+  box-shadow: none !important;
+  padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='currentColor' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  color: var(--background-color);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none;
+  box-shadow: none !important;
 }
 
 
@@ -286,13 +261,14 @@ a:focus {
 /*  FOOTER STYLES                                                             */
 /*----------------------------------------------------------------------------*/
 .footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   z-index: 1;
   background-color: var(--border-color);
-  padding: 5px 0;
   font-weight: 700;
 }
 
