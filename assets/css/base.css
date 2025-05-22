@@ -242,7 +242,7 @@ a:focus {
   background-color: var(--border-color);
   border: none;
   box-shadow: none !important;
-  padding: 0.25rem 0.5rem;
+  padding: 0;
 }
 
 .navbar-toggler-icon {
