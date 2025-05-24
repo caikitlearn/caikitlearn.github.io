@@ -211,8 +211,14 @@ a:focus {
 
 .navbar-brand {
   padding-left: 0;
+  padding-right: 0;
   font-size: var(--h2_text_size);
   font-weight: 700;
+}
+
+/* make the last icon on the right flush with the container */
+.navbar .container > div:last-child .navbar-brand:last-child {
+  margin-right: 0;
 }
 
 
