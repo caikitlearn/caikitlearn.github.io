@@ -4,83 +4,81 @@
 /* default fallback */
 /* color comments were ~vibe coded~ */
 :root {
-  --color-hover:      #aed6f1;  /* sky breeze */
-
   /* dark theme */
-  --border-color:     #e59866;  /* pumpkin spice */
+  --border-color:     #f1b285;  /* apricot bloom */
   --text-color:       #f2eae3;  /* bone ivory */
   --background-color: #17202a;  /* midnight ink */
-  --accent-color:     #85c1e9;  /* sapphire mist */
-  --fa-circle-color:  #e59866;  /* pumpkin spice */
+  --link-color:       #85c1e9;  /* blue lagoon */
+  --accent-color:     #5dade2;  /* skywave blue */
 
   /* font sizes */
-  --h1_text_size:     32px;
-  --h2_text_size:     20px;
-  --text_size:        16px;
+  --h1_text_size:     36px;
+  --h2_text_size:     24px;
+  --text_size:        18px;
 }
 
 html[data-theme='dark'] {
-  --border-color:     #e59866;  /* pumpkin spice */
+  --border-color:     #f1b285;  /* apricot bloom */
   --text-color:       #f2eae3;  /* bone ivory */
   --background-color: #17202a;  /* midnight ink */
-  --accent-color:     #85c1e9;  /* sapphire mist */
-  --fa-circle-color:  #e59866;  /* pumpkin spice */
+  --link-color:       #85c1e9;  /* blue lagoon */
+  --accent-color:     #5dade2;  /* skywave blue */
 }
 
 html[data-theme='light'] {
-  --border-color:     #6b8ca3;  /* ocean denim */
+  --border-color:     #5579b3;  /* ocean spray */
   --text-color:       #17202a;  /* midnight ink */
-  --background-color: #fdfcf9;  /* vanilla bean */
-  --accent-color:     #3a5f9b;  /* river pebble */
-  --fa-circle-color:  #6b8ca3;  /* ocean denim */
+  --background-color: #fffaf0;  /* creamy vanilla */
+  --link-color:       #3a5f9b;  /* river stone */
+  --accent-color:     #6b8ca3;  /* blue horizon */
 }
 
 html[data-theme='jazz'] {
-  --border-color:     #392682;  /* grape candy */
-  --text-color:       #2c2c44;  /* plum shadow */
-  --background-color: #e7e2ec;  /* lavender stone */
-  --accent-color:     #418b8b;  /* seafoam pop */
-  --fa-circle-color:  #9c7aa6;  /* dusty lavender */
+  --border-color:     #392682;  /* grape swirl */
+  --text-color:       #2c2c44;  /* ink drop */
+  --background-color: #e7e2ec;  /* paper cup */
+  --link-color:       #418b8b;  /* teal wave */
+  --accent-color:     #9c7aa6;  /* lavender mist */
 }
 
 html[data-theme='outrun'] {
-  --border-color:     #bb66aa;  /* candy floss */
-  --text-color:       #fdf3fa;  /* sugar dust */
-  --background-color: #2b1d4c;  /* cosmic plum */
-  --accent-color:     #6ee6e8;  /* aqua glow */
-  --fa-circle-color:  #f5c06a;  /* mango peel */
+  --border-color:     #bb66aa;  /* neon haze */
+  --text-color:       #fdf3fa;  /* sunset dust */
+  --background-color: #2b1d4c;  /* midnight grid */
+  --link-color:       #6ee6e8;  /* aqua drive */
+  --accent-color:     #f5c06a;  /* chrome glow */
 }
 
 html[data-theme='raptors'] {
-  --border-color:     #8b6cb8;  /* lilac haze */
-  --text-color:       #f5e9f0;  /* rose dust */
-  --background-color: #281850;  /* violet galaxy */
-  --accent-color:     #993344;  /* ruby brick */
-  --fa-circle-color:  #d4bb6e;  /* honey dijon */
+  --border-color:     #b4975a;  /* city sunrise */
+  --text-color:       #e0e0e0;  /* stadium lights */
+  --background-color: #2b1d4c;  /* twilight court */
+  --link-color:       #a060a0;  /* victory grape */
+  --accent-color:     #d46a7e;  /* buzzer beat */
 }
 
 html[data-theme='severance'] {
-  --border-color:     #607080;  /* toner gray */
-  --text-color:       #3b5c7d;  /* denim shadow */
-  --background-color: #eaf4f7;  /* cloud mist */
-  --accent-color:     #2874a6;  /* river stone */
-  --fa-circle-color:  #92c9e0;  /* arctic frost */
+  --border-color:     #607080;  /* lumon gray */
+  --text-color:       #3b5c7d;  /* ink data */
+  --background-color: #eaf4f7;  /* sterile white */
+  --link-color:       #92c9e0;  /* frosted screen */
+  --accent-color:     #2874a6;  /* blue key */
 }
 
 html[data-theme='snes'] {
   --border-color:     #6b5c9e;  /* amethyst purple */
   --text-color:       #1e1b1e;  /* espresso bean */
   --background-color: #bbb9e0;  /* periwinkle dream */
-  --accent-color:     #5a5e60;  /* asphalt gray */
-  --fa-circle-color:  #383038;  /* charcoal pit */
+  --link-color:       #5a5e60;  /* asphalt gray */
+  --accent-color:     #383038;  /* charcoal pit */
 }
 
 html[data-theme='tyranitar'] {
   --border-color:     #8daa7b;  /* TYRANITAR */
-  --text-color:       #e6f1eb;  /* TYRANITAR */
-  --accent-color:     #3e6e90;  /* TYRANITAR */
+  --text-color:       #acc6d5;  /* TYRANITAR */
+  --link-color:       #3e6e90;  /* TYRANITAR */
   --background-color: #121a21;  /* TYRANITAR */
-  --fa-circle-color:  #da818b;  /* TYRANITAR */
+  --accent-color:     #d9969d;  /* TYRANITAR */
 }
 
 
@@ -94,22 +92,12 @@ html {
 body {
   font: var(--text_size) 'Montserrat', sans-serif;
   line-height: 1.5;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: var(--text_size);
   transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 16px;
-  margin-left: 0;
 }
 
 h1 {
@@ -133,15 +121,6 @@ hr {
 /*----------------------------------------------------------------------------*/
 /*  MODULES / COMPONENTS                                                      */
 /*----------------------------------------------------------------------------*/
-.img-responsive {
-  display: block;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  height: auto;
-  min-width: 200px;
-}
-
 .date-right {
   float: right;
   padding-left: 100px;
@@ -159,45 +138,44 @@ hr {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--link-color);
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--accent-color);
+  color: var(--link-color);
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-hover);
+  color: var(--accent-color);
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:focus {
-  color: var(--color-hover);
+  color: var(--accent-color);
   background-color: transparent;
   text-decoration: underline;
 }
 
-.fas.fa-circle {
-  color: var(--fa-circle-color);
-}
-
-.fas.fa-list-alt,
-.fas.fa-envelope,
+.fas.fa-house,
+.fas.fa-newspaper,
+.fas.fa-file-lines,
 .fab.fa-linkedin-in,
-.fab.fa-github {
+.fab.fa-github,
+.fas.fa-palette {
   color: var(--background-color);
 }
 
-.fas.fa-list-alt:hover,
-.fas.fa-envelope:hover,
+.fas.fa-house:hover,
+.fas.fa-newspaper:hover,
+.fas.fa-file-lines:hover,
 .fab.fa-linkedin-in:hover,
 .fab.fa-github:hover {
-  color: var(--color-hover);
+  color: var(--accent-color);
 }
 
 
@@ -228,32 +206,13 @@ a:focus {
 .navbar .navbar-brand:hover,
 .navbar .nav-link:focus,
 .navbar .navbar-brand:focus {
-  color: var(--color-hover);
+  color: var(--accent-color);
 }
 
 .navbar-brand {
   padding-left: 0;
-  font-size: 16px;
+  font-size: var(--h2_text_size);
   font-weight: 700;
-}
-
-/* hamburger menu */
-.navbar-toggler {
-  background-color: var(--border-color);
-  border: none;
-  box-shadow: none !important;
-  padding: 0;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='currentColor' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  color: var(--background-color);
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: none;
-  box-shadow: none !important;
 }
 
 
@@ -272,22 +231,8 @@ a:focus {
   font-weight: 700;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 0;
-  min-height: 20px;
-  position: relative;
-  font-weight: 700;
-}
-
 .theme-select {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: 3px;
   padding: 0;
   border: 0;
   outline: none;
@@ -296,8 +241,7 @@ a:focus {
 }
 
 .theme-select select {
-  padding: 5px;
-  border-radius: 10px;
+  padding: 0px;
   font-size: var(--text_size);
   color: var(--background-color);
   background: var(--border-color);
@@ -305,7 +249,7 @@ a:focus {
 }
 
 .copyright-info {
-  text-align: center;
+  text-align: right;
   color: var(--background-color);
   flex-shrink: 0;
   font-weight: 700;
