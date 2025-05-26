@@ -1,31 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
   const themeSelect = document.getElementById('theme-select');
+  const syntaxLink = document.getElementById('syntax-theme');
 
-  if (!themeSelect) return;
+  if (!themeSelect || !syntaxLink) return;
 
-  // load saved theme or set default
-  const validThemes = [
-    'dark',
-    'light',
-    'jazz',
-    'outrun',
-    'raptors',
-    'severance',
-    'snes',
-    'tyranitar',
-  ];
+  const themeModeMap = {
+    jazz: 'light',
+    nocturne: 'dark',
+    outrun: 'dark',
+    severance: 'light',
+    snes: 'light',
+    tyranitar: 'dark',
+  };
+
+  const validThemes = Object.keys(themeModeMap);
+
+  function setTheme(theme) {
+    if (!validThemes.includes(theme)) return;
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+
+    const mode = themeModeMap[theme];
+    syntaxLink.href = '/assets/css/syntax/github-' + mode + '.css';
+  }
+
   const storedTheme = localStorage.getItem('theme');
-  const savedTheme = validThemes.includes(storedTheme) ? storedTheme : 'dark';
+  const initialTheme = validThemes.includes(storedTheme) ? storedTheme : 'dark';
 
-  themeSelect.value = savedTheme;
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeSelect.value = initialTheme;
+  setTheme(initialTheme);
 
-  // update theme on selection
   themeSelect.addEventListener('change', () => {
-    const selectedTheme = themeSelect.value;
-    if (validThemes.includes(selectedTheme)) {
-      document.documentElement.setAttribute('data-theme', selectedTheme);
-      localStorage.setItem('theme', selectedTheme);
-    }
+    setTheme(themeSelect.value);
   });
 });

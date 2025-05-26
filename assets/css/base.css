@@ -4,7 +4,7 @@
 /* default fallback */
 /* color comments were ~vibe coded~ */
 :root {
-  /* dark theme */
+  /* nocturne theme */
   --border-color:     #f1b285;  /* apricot bloom */
   --text-color:       #f2eae3;  /* bone ivory */
   --background-color: #17202a;  /* midnight ink */
@@ -12,26 +12,10 @@
   --accent-color:     #5dade2;  /* skywave blue */
 
   /* font sizes */
-  --h1_text_size:     48px;
-  --h2_text_size:     32px;
-  --text_size:        20px;
-  --caption_size:     16px;
-}
-
-html[data-theme='dark'] {
-  --border-color:     #f1b285;  /* apricot bloom */
-  --text-color:       #f2eae3;  /* bone ivory */
-  --background-color: #17202a;  /* midnight ink */
-  --link-color:       #85c1e9;  /* blue lagoon */
-  --accent-color:     #5dade2;  /* skywave blue */
-}
-
-html[data-theme='light'] {
-  --border-color:     #5579b3;  /* ocean spray */
-  --text-color:       #17202a;  /* midnight ink */
-  --background-color: #fffaf0;  /* creamy vanilla */
-  --link-color:       #3a5f9b;  /* river stone */
-  --accent-color:     #6b8ca3;  /* blue horizon */
+  --h1_text_size:     32px;
+  --h2_text_size:     24px;
+  --text_size:        16px;
+  --caption_size:     12px;
 }
 
 html[data-theme='jazz'] {
@@ -42,6 +26,14 @@ html[data-theme='jazz'] {
   --accent-color:     #9c7aa6;  /* lavender mist */
 }
 
+html[data-theme='nocturne'] {
+  --border-color:     #f1b285;  /* apricot bloom */
+  --text-color:       #f2eae3;  /* bone ivory */
+  --background-color: #17202a;  /* midnight ink */
+  --link-color:       #85c1e9;  /* blue lagoon */
+  --accent-color:     #5dade2;  /* skywave blue */
+}
+
 html[data-theme='outrun'] {
   --border-color:     #bb66aa;  /* neon haze */
   --text-color:       #fdf3fa;  /* sunset dust */
@@ -50,20 +42,12 @@ html[data-theme='outrun'] {
   --accent-color:     #f5c06a;  /* chrome glow */
 }
 
-html[data-theme='raptors'] {
-  --border-color:     #b4975a;  /* city sunrise */
-  --text-color:       #e0e0e0;  /* stadium lights */
-  --background-color: #2b1d4c;  /* twilight court */
-  --link-color:       #a060a0;  /* victory grape */
-  --accent-color:     #d46a7e;  /* buzzer beat */
-}
-
 html[data-theme='severance'] {
-  --border-color:     #607080;  /* lumon gray */
-  --text-color:       #3b5c7d;  /* ink data */
-  --background-color: #eaf4f7;  /* sterile white */
-  --link-color:       #92c9e0;  /* frosted screen */
-  --accent-color:     #2874a6;  /* blue key */
+  --border-color:     #5579b3;  /* ocean spray */
+  --text-color:       #17202a;  /* midnight ink */
+  --background-color: #fffaf0;  /* creamy vanilla */
+  --link-color:       #3a5f9b;  /* river stone */
+  --accent-color:     #6b8ca3;  /* blue horizon */
 }
 
 html[data-theme='snes'] {
