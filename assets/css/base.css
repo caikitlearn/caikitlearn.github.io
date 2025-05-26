@@ -102,22 +102,12 @@ hr {
   margin-top: 5px;
 }
 
-
-/*----------------------------------------------------------------------------*/
-/*  MODULES / COMPONENTS                                                      */
-/*----------------------------------------------------------------------------*/
-.date-right {
-  float: right;
-  padding-left: 100px;
+ul {
+  padding-left: 0;
 }
 
-.icon-label {
-  margin-top: 5px;
-}
-
-figcaption {
-  font-size: 16px;
-  font-style: italic;
+li {
+  margin-left: 1em;
 }
 
 a {
@@ -144,6 +134,15 @@ a:focus {
   text-decoration: underline;
 }
 
+figcaption {
+  font-size: 16px;
+  font-style: italic;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*  MODULES / COMPONENTS                                                      */
+/*----------------------------------------------------------------------------*/
 .fas.fa-house,
 .fas.fa-newspaper,
 .fas.fa-file-lines,
@@ -159,6 +158,20 @@ a:focus {
 .fab.fa-linkedin-in:hover,
 .fab.fa-github:hover {
   color: var(--accent-color);
+}
+
+.date-right {
+  float: right;
+  padding-left: 100px;
+}
+
+.icon-label {
+  margin-top: 5px;
+}
+
+.math-display {
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 
