@@ -2,7 +2,7 @@
 layout: post
 title: "Stirling's Pogs"
 date: 2018-08-19
-permalink: /posts/stirling
+permalink: /posts/stirlings-pogs
 excerpt: "1990s Spawn pogs, the multinomial distribution, and Stirling numbers of the second kind."
 ---
 ## Why are we talking about pogs?

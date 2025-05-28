@@ -15,7 +15,7 @@
   --h1_text_size:     32px;
   --h2_text_size:     24px;
   --text_size:        16px;
-  --caption_size:     12px;
+  --caption_size:     14px;
   --code_size:        12px;
 }
 
@@ -138,7 +138,7 @@ a:focus {
 }
 
 figcaption {
-  font-size: 16px;
+  font-size: var(--caption_size);
   font-style: italic;
   padding-top: 0.5em;
 }
@@ -193,6 +193,11 @@ figcaption {
   font-size: var(--code_size);
   display: block;
   padding: 0;
+}
+
+.verbatim-edit {
+  font-family: 'Anonymous Pro', monospace;
+  font-size: var(--code_size);
 }
 
 
