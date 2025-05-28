@@ -16,7 +16,7 @@
   --h2_text_size:     24px;
   --text_size:        16px;
   --caption_size:     12px;
-  --code_size:        10px;
+  --code_size:        12px;
 }
 
 html[data-theme='jazz'] {
