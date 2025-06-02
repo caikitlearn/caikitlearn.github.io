@@ -11,9 +11,6 @@ title: Tianyi Cai | Posts
     </h2>
     <span class='post-date'>{{ post.date | date: '%Y-%m-%d' }}</span>
   </div>
-  <ul>
-    <li>
-      <i>{{ post.excerpt }}</i>
-    </li>
-  </ul>{% endfor %}
+  <i>{{ post.excerpt }}</i>
+  {% endfor %}
 </div>
