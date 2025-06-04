@@ -7,7 +7,7 @@ excerpt: "1990s Spawn pogs, the multinomial distribution, and Stirling numbers o
 ---
 ## Why are we talking about pogs?
 
-The other day I was feeling nostalgic for my Québécois childhood and, on a whim, bought 21 packs of Spawn pogs from eBay. Each pack comes with 1 kini (slammer) and 7 pogs (milk caps). To play, people take turns using a kini to slam a face-down stack of pogs, or a stack of kinis ('kini-kini', as the kids used to say), and win any that flip up. For this Spawn collection, there are <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/157-Spawn-Kinis.html' target='_blank'>8 unique kinis</a> and <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/156-Spawn.html' target='_blank'>70 unique pogs</a> to collect.
+The other day I was feeling nostalgic for my Québécois childhood and, on a whim, bought 21 packs of Spawn pogs from eBay. Each pack comes with 1 kini (slammer) and 7 pogs (milk caps). To play, people take turns using a kini to slam a face-down stack of pogs, or a stack of kinis ('kini-kini', as the kids used to say), and win any that flip up. For this Spawn collection, there are <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/157-Spawn-Kinis.html'>8 unique kinis</a> and <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/156-Spawn.html'>70 unique pogs</a> to collect.
 
 <figure style="text-align: center;">
   <img src="/assets/images/2018-08-19-stirlings-pogs/mtl.jpg" style="max-width: 75%;">
@@ -101,7 +101,7 @@ Fortunately, the approximations are very close to the real value.
 <br>
 ## A faster exact solution
 
-Intuitively, the brute force method is inefficient because it considers every single possible 21-tuple. We can be smart about counting these tuples to come up with a faster solution; this is the part that required some creative thinking. Thanks to a discussion with Professor <a href='https://calebhmiles.github.io/' target='_blank'>Caleb Miles</a>, we arrived at a formal solution.
+Intuitively, the brute force method is inefficient because it considers every single possible 21-tuple. We can be smart about counting these tuples to come up with a faster solution; this is the part that required some creative thinking. Thanks to a discussion with Professor <a href='https://calebhmiles.github.io/'>Caleb Miles</a>, we arrived at a formal solution.
 
 For brevity, consider a simpler case with 4 unique kinis (labeled ABCD for convenience), and 6 packs to open. To begin, start with the $4^{6}$ total tuples, and subtract away the ones where we do not collect all 4 kinds of kinis.
 
@@ -164,7 +164,7 @@ This is pretty close to the simulated probabilities shown earlier. To answer my 
 <br>
 ## Who is Stirling?
 
-As it turns out, these numbers have a special name, called <a href='http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html' target='_blank'>Stirling Numbers of the Second Kind</a>, which is the number of ways to partition $n$ elements into $k$ non-empty sets, defined as
+As it turns out, these numbers have a special name, called <a href='http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html'>Stirling Numbers of the Second Kind</a>, which is the number of ways to partition $n$ elements into $k$ non-empty sets, defined as
 
 <div class='math-display'>
 $$
