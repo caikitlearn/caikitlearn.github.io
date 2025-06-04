@@ -6,10 +6,10 @@
 :root {
   /* nocturne theme */
   --border-color:     #f9c784;  /* golden apricot */
-  --text-color:       #f2eae3;  /* bone ivory */
+  --text-color:       #dcdcdc;  /* bone ivory */
   --background-color: #17202a;  /* midnight ink */
-  --link-color:       #90CAF9;  /* sky blue */
-  --accent-color:     #42A5F5;  /* deeper cerulean */
+  --link-color:       #90caf9;  /* sky blue */
+  --accent-color:     #42a5f5;  /* deeper cerulean */
 
   /* font sizes */
   --h1_text_size:     32px;
@@ -23,16 +23,16 @@ html[data-theme='jazz'] {
   --border-color:     #392682;  /* grape swirl */
   --text-color:       #2c2c44;  /* ink drop */
   --background-color: #e7e2ec;  /* paper cup */
-  --link-color:       #418b8b;  /* teal wave */
+  --link-color:       #2A5A5A;  /* midnight sax */
   --accent-color:     #9c7aa6;  /* lavender mist */
 }
 
 html[data-theme='nocturne'] {
   --border-color:     #f9c784;  /* golden apricot */
-  --text-color:       #f2eae3;  /* bone ivory */
+  --text-color:       #dcdcdc;  /* bone ivory */
   --background-color: #17202a;  /* midnight ink */
-  --link-color:       #90CAF9;  /* sky blue */
-  --accent-color:     #42A5F5;  /* deeper cerulean */
+  --link-color:       #90caf9;  /* sky blue */
+  --accent-color:     #42a5f5;  /* deeper cerulean */
 }
 
 html[data-theme='outrun'] {
@@ -44,15 +44,15 @@ html[data-theme='outrun'] {
 }
 
 html[data-theme='severance'] {
-  --border-color:     #3a3f4a;  /* ink gray */
+  --border-color:     #000325;  /* navy ink */
   --text-color:       #17202a;  /* midnight ink */
   --background-color: #fffaf0;  /* creamy vanilla */
-  --link-color:       #a0d2db;  /* powder blue */
-  --accent-color:     #5579b3;  /* steel blue */
+  --link-color:       #77A8B2;  /* powder blue */
+  --accent-color:     #466699;  /* steel blue */
 }
 
 html[data-theme='snes'] {
-  --border-color:     #9583d1;  /* retro lilac */
+  --border-color:     #29004d;  /* retro amethyst */
   --text-color:       #1e1b1e;  /* espresso bean */
   --background-color: #bbb9e0;  /* periwinkle dream */
   --link-color:       #5a5e60;  /* asphalt gray */

@@ -10,7 +10,7 @@ excerpt: "1990s Spawn pogs, the multinomial distribution, and Stirling numbers o
 The other day I was feeling nostalgic for my Québécois childhood and, on a whim, bought 21 packs of Spawn pogs from eBay. Each pack comes with 1 kini (slammer) and 7 pogs (milk caps). To play, people take turns using a kini to slam a face-down stack of pogs, or a stack of kinis ('kini-kini', as the kids used to say), and win any that flip up. For this Spawn collection, there are <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/157-Spawn-Kinis.html' target='_blank'>8 unique kinis</a> and <a href='https://www.milkcapmania.co.uk/World-POG-Federation-WPF/Canada-Games/156-Spawn.html' target='_blank'>70 unique pogs</a> to collect.
 
 <figure style="text-align: center;">
-  <img src="/assets/images/2018-08-19-stirling/mtl.jpg" style="max-width: 75%;">
+  <img src="/assets/images/2018-08-19-stirlings-pogs/mtl.jpg" style="max-width: 75%;">
   <figcaption>simpler times</figcaption>
 </figure>
 
@@ -204,7 +204,7 @@ $$
 So I was mildly unlucky and missed out on the 4th kini (see below). An exact test would show insufficient evidence to reject the null hypothesis that the 8 kinis are equally likely to appear in a pack.
 
 <figure style="text-align: center;">
-  <img src="/assets/images/2018-08-19-stirling/kinis.jpg" style="max-width: 75%;">
+  <img src="/assets/images/2018-08-19-stirlings-pogs/kinis.jpg" style="max-width: 75%;">
   <figcaption>there are different colors and color patterns for each kini... this changes everything</figcaption>
 </figure>
 
