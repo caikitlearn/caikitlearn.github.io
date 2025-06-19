@@ -39,7 +39,7 @@
           tyranitar: 'dark',
         };
         const storedTheme = localStorage.getItem('theme');
-        const theme = themeModeMap[storedTheme] ? storedTheme : 'dark';
+        const theme = themeModeMap[storedTheme] ? storedTheme : 'nocturne';
         const mode = themeModeMap[theme];
 
         document.documentElement.setAttribute('data-theme', theme);
