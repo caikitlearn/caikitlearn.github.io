@@ -93,7 +93,7 @@ body {
 h1 {
   font-size: var(--h1_text_size);
   font-weight: 600;
-  color: var(--accent-color);
+  color: var(--border-color);
   font-family: 'Montserrat', sans-serif;
   text-align: left;
   text-transform: none;
@@ -102,6 +102,7 @@ h1 {
 h2 {
   font-size: var(--h2_text_size);
   font-weight: 600;
+  color: var(--accent-color);
   text-align: left;
 }
 
