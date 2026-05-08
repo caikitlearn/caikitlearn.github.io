@@ -1,36 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const themeSelect = document.getElementById('theme-select');
-  const syntaxLink = document.getElementById('syntax-theme');
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSelect = document.getElementById("theme-select");
+  const syntaxLink = document.getElementById("syntax-theme");
 
   if (!themeSelect || !syntaxLink) return;
 
   const themeModeMap = {
-    blue_jays: 'light',
-    jazz: 'light',
-    nocturne: 'dark',
-    outrun: 'dark',
-    severance: 'light',
-    tyranitar: 'dark',
+    blue_jays: "light",
+    jazz: "light",
+    nocturne: "dark",
+    outrun: "dark",
+    severance: "light",
+    tyranitar: "dark",
   };
 
   const validThemes = Object.keys(themeModeMap);
 
   function setTheme(theme) {
     if (!validThemes.includes(theme)) return;
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
 
     const mode = themeModeMap[theme];
-    syntaxLink.href = '/assets/css/syntax/github-' + mode + '.css';
+    syntaxLink.href = "/assets/css/syntax/github-" + mode + ".css";
   }
 
-  const storedTheme = localStorage.getItem('theme');
-  const initialTheme = validThemes.includes(storedTheme) ? storedTheme : 'tyranitar';
+  const storedTheme = localStorage.getItem("theme");
+  const initialTheme = validThemes.includes(storedTheme)
+    ? storedTheme
+    : "tyranitar";
 
   themeSelect.value = initialTheme;
   setTheme(initialTheme);
 
-  themeSelect.addEventListener('change', () => {
+  themeSelect.addEventListener("change", () => {
     setTheme(themeSelect.value);
   });
 });

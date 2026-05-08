@@ -5,68 +5,67 @@
 /* color comments were ~vibe coded~ */
 :root {
   /* nocturne theme */
-  --border-color:     #e3a854;  /* sunset gold */
-  --text-color:       #d8dee9;  /* winter haze */
-  --background-color: #12181c;  /* midnight ink */
-  --title-color:      #7dafd9;  /* sky blue */
-  --accent-color:     #ffeead;  /* lunar halo */
+  --border-color: #e3a854; /* sunset gold */
+  --text-color: #d8dee9; /* winter haze */
+  --background-color: #12181c; /* midnight ink */
+  --title-color: #7dafd9; /* sky blue */
+  --accent-color: #ffeead; /* lunar halo */
 
   /* font sizes */
-  --h1_text_size:     32px;
-  --h2_text_size:     20px;
-  --text_size:        16px;
-  --caption_size:     14px;
-  --code_size:        12px;
+  --h1_text_size: 32px;
+  --h2_text_size: 20px;
+  --text_size: 16px;
+  --caption_size: 14px;
+  --code_size: 12px;
 }
 
-html[data-theme='blue_jays'] {
-  --border-color:     #1d2d5c;  /* dugout navy */
-  --text-color:       #020618;  /* umpire black */
-  --background-color: #f0fdfa;  /* dome open */
-  --title-color:      #134a8e;  /* slugger blue */
-  --accent-color:     #e8291c;  /* canada day */
+html[data-theme="blue_jays"] {
+  --border-color: #1d2d5c; /* dugout navy */
+  --text-color: #020618; /* umpire black */
+  --background-color: #f0fdfa; /* dome open */
+  --title-color: #134a8e; /* slugger blue */
+  --accent-color: #e8291c; /* canada day */
 }
 
-html[data-theme='jazz'] {
-  --border-color:     #392682;  /* grape swirl */
-  --text-color:       #2c2c44;  /* ink drop */
-  --background-color: #e7e2ec;  /* paper cup */
-  --title-color:      #2a5a5a;  /* teal swirl */
-  --accent-color:     #9c7aa6;  /* lavender mist */
+html[data-theme="jazz"] {
+  --border-color: #392682; /* grape swirl */
+  --text-color: #2c2c44; /* ink drop */
+  --background-color: #e7e2ec; /* paper cup */
+  --title-color: #2a5a5a; /* teal swirl */
+  --accent-color: #9c7aa6; /* lavender mist */
 }
 
-html[data-theme='severance'] {
-  --border-color:     #000325;  /* lumon navy */
-  --text-color:       #17202a;  /* innie slate */
-  --background-color: #fffffc;  /* fluorescent cream */
-  --title-color:      #00796b;  /* mdr teal */
-  --accent-color:     #5c9fcc;  /* procedure cerulean */
+html[data-theme="severance"] {
+  --border-color: #000325; /* lumon navy */
+  --text-color: #17202a; /* innie slate */
+  --background-color: #fffffc; /* fluorescent cream */
+  --title-color: #00796b; /* mdr teal */
+  --accent-color: #5c9fcc; /* procedure cerulean */
 }
 
-html[data-theme='nocturne'] {
-  --border-color:     #e3a854;  /* sunset gold */
-  --text-color:       #d8dee9;  /* winter haze */
-  --background-color: #12181c;  /* midnight ink */
-  --title-color:      #7dafd9;  /* sky blue */
-  --accent-color:     #ffeead;  /* lunar halo */
+html[data-theme="nocturne"] {
+  --border-color: #e3a854; /* sunset gold */
+  --text-color: #d8dee9; /* winter haze */
+  --background-color: #12181c; /* midnight ink */
+  --title-color: #7dafd9; /* sky blue */
+  --accent-color: #ffeead; /* lunar halo */
 }
 
-html[data-theme='outrun'] {
-  --border-color:     #bb66aa;  /* neon haze */
-  --text-color:       #fdf3fa;  /* sunset dust */
-  --background-color: #2b1d4c;  /* midnight grid */
-  --title-color:      #6ee6e8;  /* aqua drive */
-  --accent-color:     #f5c06a;  /* chrome glow */
+html[data-theme="outrun"] {
+  --border-color: #bb66aa; /* neon haze */
+  --text-color: #fdf3fa; /* sunset dust */
+  --background-color: #2b1d4c; /* midnight grid */
+  --title-color: #6ee6e8; /* aqua drive */
+  --accent-color: #f5c06a; /* chrome glow */
 }
 
-html[data-theme='tyranitar'] {
-  --border-color:     #8daa7b;  /* rock slide */
-  --text-color:       #acc6d5;  /* hidden power */
-  --title-color:      #3e6e90;  /* dragon dance */
-  --background-color: #121a21;  /* focus punch */
-  --accent-color:     #d9969d;  /* crunch */
+html[data-theme="tyranitar"] {
+  --border-color: #8daa7b; /* rock slide */
+  --text-color: #acc6d5; /* hidden power */
+  --title-color: #3e6e90; /* dragon dance */
+  --background-color: #121a21; /* focus punch */
+  --accent-color: #d9969d; /* crunch */
 }
-
 
 /*----------------------------------------------------------------------------*/
 /*  BASE STYLES                                                               */
@@ -80,21 +79,25 @@ p {
 }
 
 body {
-  font: var(--text_size) 'Montserrat', sans-serif;
+  font:
+    var(--text_size) "Montserrat",
+    sans-serif;
   line-height: 1.5;
   padding-top: 5em;
   padding-bottom: 3em;
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: var(--text_size);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 h1 {
   font-size: var(--h1_text_size);
   font-weight: 600;
   color: var(--title-color);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: left;
   text-transform: none;
 }
@@ -168,30 +171,56 @@ figcaption {
 /*    - body { margin: 0 }      (removes default 8px browser margin)          */
 /*    - heading / list margins  (matches the tighter bootstrap spacing)       */
 /*============================================================================*/
-*, *::before, *::after { box-sizing: border-box; }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* suppress the gray tap-flash box mobile webkit/blink draws on links and
    buttons. bootstrap reboot turned this off; without it, tapping a navbar
    icon briefly paints an OS-level highlight before the page navigates. */
-html { -webkit-tap-highlight-color: transparent; }
+html {
+  -webkit-tap-highlight-color: transparent;
+}
 
-body { margin: 0; }
+body {
+  margin: 0;
+}
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
-p { margin-top: 0; margin-bottom: 1rem; }
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
-ul, ol { margin-top: 0; margin-bottom: 1rem; }
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 
-figure { margin: 0 0 1rem; }
+figure {
+  margin: 0 0 1rem;
+}
 
 /* form controls don't inherit page font by default — bootstrap reboot used to
    normalize this. without it, the footer's <select> falls back to the browser
    UA font instead of Montserrat. */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -211,17 +240,48 @@ button, input, optgroup, select, textarea {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-@media (min-width: 576px)  { .container { max-width: 540px;  } }
-@media (min-width: 768px)  { .container { max-width: 720px;  } }
-@media (min-width: 992px)  { .container { max-width: 960px;  } }
-@media (min-width: 1200px) { .container { max-width: 1140px; } }
-@media (min-width: 1400px) { .container { max-width: 1320px; } }
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
 
-.d-flex { display: flex; }
-.d-block { display: block; }
-.justify-content-between { justify-content: space-between; }
-.align-items-center { align-items: center; }
-.mx-auto { margin-left: auto; margin-right: auto; }
+.d-flex {
+  display: flex;
+}
+.d-block {
+  display: block;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .fixed-top {
   position: fixed;
@@ -236,7 +296,9 @@ button, input, optgroup, select, textarea {
   height: auto;
 }
 
-.rounded-circle { border-radius: 50%; }
+.rounded-circle {
+  border-radius: 50%;
+}
 
 /*============================================================================*/
 /*  ADDED: NAVBAR-BRAND SPACING                                               */
@@ -246,7 +308,9 @@ button, input, optgroup, select, textarea {
 /*  child { margin-right: 0 }" RULE BELOW STILL WINS FOR THE LAST RIGHT-SIDE  */
 /*  ICON (HIGHER SPECIFICITY), KEEPING IT FLUSH WITH THE CONTAINER EDGE.      */
 /*============================================================================*/
-.navbar-brand { margin-right: 1rem; }
+.navbar-brand {
+  margin-right: 1rem;
+}
 /*============================================================================*/
 /*  END ADDED BLOCK                                                           */
 /*============================================================================*/
@@ -304,7 +368,7 @@ button, input, optgroup, select, textarea {
 }
 
 .post-date {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   color: var(--text-color);
 }
 
@@ -318,18 +382,17 @@ button, input, optgroup, select, textarea {
 }
 
 .highlight pre code {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-size: var(--code_size);
   display: block;
   padding: 0;
 }
 
 .verbatim-edit {
-  font-family: 'Anonymous Pro', monospace;
+  font-family: "Anonymous Pro", monospace;
   font-size: var(--code_size);
   text-align: left;
 }
-
 
 /*----------------------------------------------------------------------------*/
 /*  NAVBAR STYLES                                                             */
@@ -372,7 +435,6 @@ button, input, optgroup, select, textarea {
 .navbar .container > div:last-child .navbar-brand:last-child {
   margin-right: 0;
 }
-
 
 /*----------------------------------------------------------------------------*/
 /*  FOOTER STYLES                                                             */
