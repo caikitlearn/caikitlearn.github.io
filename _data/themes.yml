@@ -1,0 +1,8 @@
+default: tyranitar
+list:
+  - { id: blue_jays, label: "blue jays", mode: light, emoji: "🔆" }
+  - { id: jazz,      label: "jazz",      mode: light, emoji: "🔆" }
+  - { id: severance, label: "severance", mode: light, emoji: "🔆" }
+  - { id: nocturne,  label: "nocturne",  mode: dark,  emoji: "🌙" }
+  - { id: outrun,    label: "outrun",    mode: dark,  emoji: "🌙" }
+  - { id: tyranitar, label: "tyranitar", mode: dark,  emoji: "🌙" }

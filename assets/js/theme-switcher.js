@@ -1,18 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const themeSelect = document.getElementById("theme-select");
   const syntaxLink = document.getElementById("syntax-theme");
+  const dataEl = document.getElementById("theme-data");
 
-  if (!themeSelect || !syntaxLink) return;
+  if (!themeSelect || !syntaxLink || !dataEl) return;
 
-  const themeModeMap = {
-    blue_jays: "light",
-    jazz: "light",
-    nocturne: "dark",
-    outrun: "dark",
-    severance: "light",
-    tyranitar: "dark",
-  };
-
+  const data = JSON.parse(dataEl.textContent);
+  const themeModeMap = Object.fromEntries(
+    data.list.map((t) => [t.id, t.mode]),
+  );
   const validThemes = Object.keys(themeModeMap);
 
   function setTheme(theme) {
@@ -27,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const storedTheme = localStorage.getItem("theme");
   const initialTheme = validThemes.includes(storedTheme)
     ? storedTheme
-    : "tyranitar";
+    : data.default;
 
   themeSelect.value = initialTheme;
   setTheme(initialTheme);

@@ -46,19 +46,21 @@
       id="syntax-theme"
       href='{{ "/assets/css/syntax/github-dark.css" | relative_url }}'
     />
+    <!--- THEME DATA (single source: _data/themes.yml) --->
+    <script id="theme-data" type="application/json">
+      {{ site.data.themes | jsonify }}
+    </script>
     <!--- THEME SETTING --->
     <script>
       (function () {
-        const themeModeMap = {
-          blue_jays: "light",
-          jazz: "light",
-          nocturne: "dark",
-          outrun: "dark",
-          severance: "light",
-          tyranitar: "dark",
-        };
+        const data = JSON.parse(
+          document.getElementById("theme-data").textContent,
+        );
+        const themeModeMap = Object.fromEntries(
+          data.list.map((t) => [t.id, t.mode]),
+        );
         const storedTheme = localStorage.getItem("theme");
-        const theme = themeModeMap[storedTheme] ? storedTheme : "tyranitar";
+        const theme = themeModeMap[storedTheme] ? storedTheme : data.default;
         const mode = themeModeMap[theme];
 
         document.documentElement.setAttribute("data-theme", theme);
